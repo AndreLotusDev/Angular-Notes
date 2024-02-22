@@ -2,7 +2,7 @@
 aliases: 
 tags: 
 date created: Monday, February 19th 2024, 6:27:39 pm
-date modified: Wednesday, February 21st 2024, 12:21:15 am
+date modified: Wednesday, February 21st 2024, 12:56:56 am
 sticker: lucide//file-code
 ---
 ---
@@ -67,3 +67,52 @@ ng --help -> lista commandos com mais detalhes
 ---
 
 O web-pack-dev-server é o ambiente de desenvolvimento que fica escutando qualquer alteração, ao sinal de qualquer alteração o sistema recompila novamente.
+
+Tem como compilar sendo para produção com o commando npm s --prod, com isso os arquivos serão compactados, a aplicação será mais performática e os pacotes que chegarão para o cliente final serão muito menores.
+
+Isso é útil somente para simular o ambiente de produção, mas não é adequado para de fato se utilizar para o ambiente de produção
+
+npm b --prod -> builda para produção para colocar no servidor de produção
+
+O ANGULAR Dev Tools é muito útil, pois permite no desenvolvimento a gente debuggar nossa aplicação angular.
+
+---
+
+A documentação do angular conta com a API LIST, o lugar mais importante onde tem tudo documentado do que o framework pode lhe ofertar:
+
+https://angular.io/api
+
+Comece a estudar angular por aqui
+
+https://angular.io/guide/architecture
+
+---
+
+Para criar components a gente usa o ANGULAR CLI
+
+ng generate component [NOME_COMPONENTE]
+ng g c [NOME_COMPONENTE]
+
+ng g --help -> Traz uma lista de components que posso gerar, tendo uma lista completa dos schematis:
+
+[´TODO] estudar os tipos de schematic que podemos gerar
+
+- class
+- component
+- directive
+- enum
+- guard
+- interface
+- library
+- module
+- pipe
+- service
+- serviceWorker
+- universal
+- webWorker
+
+Dentro de um modulo temos 3 coisas injetaveis
+
+- declarations -> onde eu instancio os componentes
+- imports -> onde eu importo outros modulos
+- providers -> onde eu importo os serviços
