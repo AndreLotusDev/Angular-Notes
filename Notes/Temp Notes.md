@@ -2,7 +2,7 @@
 aliases: 
 tags: 
 date created: Monday, February 19th 2024, 6:27:39 pm
-date modified: Wednesday, February 21st 2024, 12:56:56 am
+date modified: Thursday, February 22nd 2024, 6:32:27 pm
 sticker: lucide//file-code
 ---
 ---
@@ -63,6 +63,8 @@ ng n --help -> lista como fazer o processo de criação do projeto
 ng -> lista commandos possiveis para rodar
 ng --help -> lista commandos com mais detalhes
 
+ng new --minimal -g -> cria um projeto com o minimo possível
+
 
 ---
 
@@ -113,6 +115,8 @@ ng g --help -> Traz uma lista de components que posso gerar, tendo uma lista com
 
 Dentro de um modulo temos 3 coisas injetaveis
 
-- declarations -> onde eu instancio os componentes
+- declarations -> onde eu instancio os components
 - imports -> onde eu importo outros modulos
 - providers -> onde eu importo os serviços
+- 
+---
