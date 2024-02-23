@@ -2,7 +2,7 @@
 aliases: 
 tags: 
 date created: Monday, February 19th 2024, 6:27:39 pm
-date modified: Thursday, February 22nd 2024, 6:32:27 pm
+date modified: Friday, February 23rd 2024, 1:48:25 am
 sticker: lucide//file-code
 ---
 ---
@@ -118,5 +118,28 @@ Dentro de um modulo temos 3 coisas injetaveis
 - declarations -> onde eu instancio os components
 - imports -> onde eu importo outros modulos
 - providers -> onde eu importo os serviços
-- 
+
 ---
+
+Existem alguns frameworks para angular muitos famosos:
+
+- Bootstrap
+	- ngx-bootstrap
+	- https://www.npmjs.com/package/ngx-bootstrap
+- Material
+
+---
+
+One way binding é quando bindamos a variavel somente para ler, ou seja ela ´é readonly somente.
+
+![[Pasted image 20240223004015.png]]
+
+Two way binding já é o contrário, os dois lados podem atualizar do lado oposto, ou seja, nao sendo unidirecional.
+
+![[Pasted image 20240223004436.png]]
+
+---
+
+Angular Style Guide é as boas praticas para seguir no desenvolvimento do ANGULAR
+	https://angular.io/guide/styleguide
+

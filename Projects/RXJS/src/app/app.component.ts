@@ -1,6 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { Observable, Subscription } from 'rxjs';
+import { Observable, Observer, Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -10,10 +10,10 @@ import { Observable, Subscription } from 'rxjs';
   styles: [],
 })
 export class AppComponent implements OnInit, OnDestroy {
-  _myObservable: Subscription | null = null;
+  _mySubscription: Subscription | null = null;
 
   ngOnDestroy(): void {
-    this._myObservable?.unsubscribe();
+    this._mySubscription?.unsubscribe();
   }
   ngOnInit(): void {
 
@@ -24,7 +24,12 @@ export class AppComponent implements OnInit, OnDestroy {
     // this.myPromise('Jose').then((res) => console.log(res));
 
     //subscribe the myObservable function
-    this._myObservable = this.myObservable('Andre').subscribe((res) => console.log(res));
+    // this._mySubscription = this.myObservable('Andre').subscribe((res) => console.log(res));
+
+    //Use the constructObserver
+    let obs = this.myObservable('Andre');
+    this._mySubscription = obs.subscribe(this.constructObserver());
+    this._mySubscription.add(() => console.log('complete'));
   }
   title = 'RXJS';
 
@@ -43,5 +48,13 @@ export class AppComponent implements OnInit, OnDestroy {
     return new Observable((observer) => {
       setInterval(() => observer.next(name), 1000);
     })
+  }
+
+  constructObserver() : Observer<string> {
+    return {
+      next: (value) => console.log(value),
+      error: (error) => console.log(error),
+      complete: () => console.log('complete')
+    }
   }
 }
