@@ -1,11 +1,8 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 import { Observable, Observer, Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet],
   templateUrl: './app.component.html',
   styles: [],
 })
@@ -27,9 +24,9 @@ export class AppComponent implements OnInit, OnDestroy {
     // this._mySubscription = this.myObservable('Andre').subscribe((res) => console.log(res));
 
     //Use the constructObserver
-    let obs = this.myObservable('Andre');
-    this._mySubscription = obs.subscribe(this.constructObserver());
-    this._mySubscription.add(() => console.log('complete'));
+    // let obs = this.myObservable('Andre');
+    // this._mySubscription = obs.subscribe(this.constructObserver());
+    // this._mySubscription.add(() => console.log('complete'));
   }
   title = 'RXJS';
 

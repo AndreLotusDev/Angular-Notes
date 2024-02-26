@@ -2,7 +2,7 @@
 aliases: 
 tags: 
 date created: Friday, February 23rd 2024, 1:48:25 am
-date modified: Friday, February 23rd 2024, 1:51:15 am
+date modified: Monday, February 26th 2024, 12:02:17 pm
 ---
 É uma promessa que te promete que vai te retornar um valor assim que possível.
 
