@@ -1,0 +1,9 @@
+.example-container {
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  mat-sidenav-container {
+    height: 100%;
+  }
