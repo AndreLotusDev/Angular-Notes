@@ -2,7 +2,7 @@
 aliases: 
 tags: 
 date created: Monday, February 19th 2024, 6:27:39 pm
-date modified: Friday, February 23rd 2024, 1:48:25 am
+date modified: Monday, February 26th 2024, 4:58:11 pm
 sticker: lucide//file-code
 ---
 ---
@@ -143,3 +143,6 @@ Two way binding já é o contrário, os dois lados podem atualizar do lado opost
 Angular Style Guide é as boas praticas para seguir no desenvolvimento do ANGULAR
 	https://angular.io/guide/styleguide
 
+---
+
+É sempre bom quando instala um modulo novo ou package novo sempre recompilar o projeto por completo para se evitar dor de cabeça.
