@@ -2,7 +2,7 @@
 aliases: 
 tags: 
 date created: Monday, February 26th 2024, 4:56:50 pm
-date modified: Wednesday, February 28th 2024, 8:38:46 pm
+date modified: Thursday, February 29th 2024, 8:38:51 pm
 ---
 
 # TODO
@@ -29,6 +29,10 @@ date modified: Wednesday, February 28th 2024, 8:38:46 pm
 - Criar um route resolve e snapshot
 - Passar data atraves da rota
 - Usar o routeguard -> canLoad, canActivate, canDeactivate
+- usar pipes default do angular
+- criar um pipe provider (criar um pipe provider), de preferencia um que seja formatador de imagem
+- fazer a injeção de um provider (pipe), direto no componente
+- Criar um BAR_PROVIDERS para set injetado no root app.module para outros lugares terem como consumir essa lista de providers
 
 ---
 
