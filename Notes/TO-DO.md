@@ -2,7 +2,7 @@
 aliases: 
 tags: 
 date created: Monday, February 26th 2024, 4:56:50 pm
-date modified: Thursday, February 29th 2024, 8:38:51 pm
+date modified: Friday, March 1st 2024, 3:01:53 am
 ---
 
 # TODO
@@ -33,6 +33,11 @@ date modified: Thursday, February 29th 2024, 8:38:51 pm
 - criar um pipe provider (criar um pipe provider), de preferencia um que seja formatador de imagem
 - fazer a injeção de um provider (pipe), direto no componente
 - Criar um BAR_PROVIDERS para set injetado no root app.module para outros lugares terem como consumir essa lista de providers
+- Fazer uma injeção de service direto no componente na opção providers, porem usando a propriedade useClass: | utilizar uma classe mockavel em vez da classe real
+- Criar uma injeção de modulo estático com token injection
+- Criar um injetor de dependencia no proprio componente onde ele consome uma factory, ao qual a factory também tem uma dependencia
+- Usar o useExisting no DI
+- Estudar sobre NGRXJS
 
 ---
 
