@@ -2,7 +2,7 @@
 aliases: 
 tags: 
 date created: Monday, February 26th 2024, 4:56:50 pm
-date modified: Friday, March 1st 2024, 3:01:53 am
+date modified: Saturday, March 2nd 2024, 3:05:57 pm
 ---
 
 # TODO
@@ -38,6 +38,8 @@ date modified: Friday, March 1st 2024, 3:01:53 am
 - Criar um injetor de dependencia no proprio componente onde ele consome uma factory, ao qual a factory também tem uma dependencia
 - Usar o useExisting no DI
 - Estudar sobre NGRXJS
+- Criar um serviço, ao qual uma propriedade observavel dele ja retorna a execução de um metodo
+- Criar um serviço ao qual uma propriedade observavel é instanciada e que a partir dela 3 mesmos lugares consumam essa variavel de forma subscrita
 
 ---
 
