@@ -2,7 +2,7 @@
 aliases: 
 tags: 
 date created: Monday, February 26th 2024, 4:56:50 pm
-date modified: Saturday, March 2nd 2024, 3:05:57 pm
+date modified: Sunday, March 3rd 2024, 8:47:07 pm
 ---
 
 # TODO
@@ -40,6 +40,7 @@ date modified: Saturday, March 2nd 2024, 3:05:57 pm
 - Estudar sobre NGRXJS
 - Criar um serviço, ao qual uma propriedade observavel dele ja retorna a execução de um metodo
 - Criar um serviço ao qual uma propriedade observavel é instanciada e que a partir dela 3 mesmos lugares consumam essa variavel de forma subscrita
+- Criar um teste de unidade para algum pipe do projeto
 
 ---
 
