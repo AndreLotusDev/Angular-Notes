@@ -48,10 +48,6 @@ export class RegisterComponent implements OnInit {
         selectedStates.push(this.states[index])
       }
     })
-
-    console.log(typeof(this.finalUser));
-    console.log(tempUser);
-    console.log(selectedStates);
   }
 
 }
