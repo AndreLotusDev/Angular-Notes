@@ -20,6 +20,11 @@
             </div>
         </div>
 
+        <!-- Date of birth -->
+        <label for="dob" class="font-semibold text-gray-700">Date of Birth</label>
+        <input mask="d0/M0/0000" class="mt-1 mb-2 border focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+            formControlName="dob">
+
         <button (click)="addUser()"
             class="inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
             Submit
