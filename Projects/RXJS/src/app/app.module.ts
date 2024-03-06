@@ -7,6 +7,7 @@ import { routes } from './app.routes';
 import { AppComponent } from './app.component';
 import { RegisterComponent } from './register/register.component';
 import { NgxMaskDirective, NgxMaskPipe, provideEnvironmentNgxMask } from 'ngx-mask';
+import { NgBrazil } from 'ng-brazil';
 
 @NgModule({
   imports: [
@@ -15,7 +16,8 @@ import { NgxMaskDirective, NgxMaskPipe, provideEnvironmentNgxMask } from 'ngx-ma
     ReactiveFormsModule,
     RouterModule.forRoot(routes),
     NgxMaskDirective, 
-    NgxMaskPipe
+    NgxMaskPipe,
+    NgBrazil
   ],
   declarations: [
       AppComponent,

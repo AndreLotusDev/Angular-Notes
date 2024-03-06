@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormArray, FormBuilder, FormGroup } from '@angular/forms';
 import { StateService } from './service/state.service';
 import { User } from './models/user.model';
+import { MASKS,NgBrazilValidators  } from 'ng-brazil';
 
 @Component({
   selector: 'app-register',
@@ -12,6 +13,7 @@ export class RegisterComponent implements OnInit {
   userForm: FormGroup = new FormGroup({});
   states: string[] = [];
   finalUser: User = new User();
+  public MASKS = MASKS;
 
   constructor(private fb: FormBuilder, private stateService: StateService) { }
   ngOnInit(): void {
@@ -20,7 +22,9 @@ export class RegisterComponent implements OnInit {
     this.userForm = this.fb.group({
       name: [''],
       lastName: [''],
-      states: this.fb.array([])
+      states: this.fb.array([]),
+      dob: this.fb.control(''),
+      cfp: this.fb.control('', [NgBrazilValidators.cpf]),
     });
 
     const selectedStates = this.userForm.get('states') as FormArray;
