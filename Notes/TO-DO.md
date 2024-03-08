@@ -2,13 +2,11 @@
 aliases: 
 tags: 
 date created: Monday, February 26th 2024, 4:56:50 pm
-date modified: Monday, March 4th 2024, 7:04:11 am
+date modified: Wednesday, March 6th 2024, 11:16:12 pm
 ---
 
 # TODO
 
-- Fazer uma validação com mascaras e ngmask
-- Fazer uma validação usando ng2-brazilian npm package
 - Usar o ng2-validation
 - Implementar validações avançadas de formulário
 - formularios dinamicos em angular
@@ -44,8 +42,13 @@ date modified: Monday, March 4th 2024, 7:04:11 am
 - Criar um teste em component
 - Criar um teste de serviço
 - Fez um app que faça test-coverage para ver quais linhas estão sendo testadas e quais não estão sendo testadas
+- Criar variaveis de ambientes para o angular
+- Como mapear objetos complexos que vem do backend, ficam no formbuilder, depois tem que ser mandado novamente para o backend
 
 ---
 
 # Done
+
+- Fazer uma validação com mascaras e ngmask
+- Fazer uma validação usando ng2-brazilian npm package
 

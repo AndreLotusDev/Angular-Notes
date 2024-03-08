@@ -26,8 +26,14 @@
             formControlName="dob">
 
         <!-- CFP Brazilian field -->
-        <label for="cfp" class="font-semibold text-gray-700">CPF</label>
+        <label for="cpf" class="font-semibold text-gray-700">CPF</label>
         <input type="text" [mask]="this.MASKS['cpf'].text" formControlName="cpf">
+
+        <!-- Age -->
+        <label for="age" class="font-semibold text-gray-700">Age</label>
+        <input type="number" formControlName="age">
+        <p *ngIf="this.userForm.controls['age'].errors?.['min']" class="text-red-500">
+        The minimum age should be at least 18</p>
 
         <button (click)="addUser()"
             class="inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">

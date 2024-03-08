@@ -17,7 +17,9 @@ import { NgBrazil } from 'ng-brazil';
     RouterModule.forRoot(routes),
     NgxMaskDirective, 
     NgxMaskPipe,
-    NgBrazil
+    NgBrazil,
+    ReactiveFormsModule
+
   ],
   declarations: [
       AppComponent,
