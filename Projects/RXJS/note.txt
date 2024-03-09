@@ -1,0 +1,1 @@
+This little project contain informations about how to use forms, using ng form maske and custom validator, the version 2 doesn't have because to make the app run in the newer version of angular

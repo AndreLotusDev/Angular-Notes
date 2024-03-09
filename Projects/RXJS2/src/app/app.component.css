@@ -1,0 +1,11 @@
+.active {
+    color: red; /* Or any style to indicate active state */
+}
+
+.mat-mdc-tab .mdc-tab__text-label {
+    color:black !important;
+}
+
+form {
+    border: solid black 2px;
+}
