@@ -2,12 +2,11 @@
 aliases: 
 tags: 
 date created: Monday, February 26th 2024, 4:56:50 pm
-date modified: Wednesday, March 6th 2024, 11:16:12 pm
+date modified: Sunday, March 10th 2024, 2:01:57 pm
 ---
 
 # TODO
 
-- Usar o ng2-validation
 - Implementar validações avançadas de formulário
 - formularios dinamicos em angular
 - criar um modulo sobre roteamento
@@ -43,12 +42,24 @@ date modified: Wednesday, March 6th 2024, 11:16:12 pm
 - Criar um teste de serviço
 - Fez um app que faça test-coverage para ver quais linhas estão sendo testadas e quais não estão sendo testadas
 - Criar variaveis de ambientes para o angular
-- Como mapear objetos complexos que vem do backend, ficam no formbuilder, depois tem que ser mandado novamente para o backend
-
+- Como mapear objetos complexos que vem do backend, ficam no formbuilder, depois tem que set mandado novamente para o backend
+- Patch value com dados aninhados (modulo final aula inclusao fornecedor pt 3)
+- Implementar uma herança de classes para chamados de serviço para evitar copyandpaste                   ![[Pasted image 20240309234547.png]]
+- Instalar o spinner service pelo ngx spinner
+- Instalar um command UI para executar commandos do angular
+- Utilizar don sanitizer para dar bypass na url
+- Usar o viacep para fazer validação no typescript
+- Implementar um HttpInterceptor para validar se uma chamada HTTP deu error no meio do caminho ![[Pasted image 20240310140148.png]]
+- Proteger as rotas pelo front end             
+  ![[Pasted image 20240310153431.png]]
+  ![[Pasted image 20240310153513.png]]
+- Adicionar um cropper de imagem no angular
+  
 ---
 
 # Done
 
 - Fazer uma validação com mascaras e ngmask
 - Fazer uma validação usando ng2-brazilian npm package
+- Usar o ng2-validation
 
