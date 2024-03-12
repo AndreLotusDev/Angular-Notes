@@ -2,7 +2,7 @@
 aliases: 
 tags: 
 date created: Monday, February 26th 2024, 4:56:50 pm
-date modified: Sunday, March 10th 2024, 2:01:57 pm
+date modified: Sunday, March 10th 2024, 9:10:16 pm
 ---
 
 # TODO
@@ -54,6 +54,8 @@ date modified: Sunday, March 10th 2024, 2:01:57 pm
   ![[Pasted image 20240310153431.png]]
   ![[Pasted image 20240310153513.png]]
 - Adicionar um cropper de imagem no angular
+- Criar uma classe super para evitar repetição de código
+- Criar base components
   
 ---
 
