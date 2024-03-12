@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormArray, FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { StateService } from './service/state.service';
 import { User } from './models/user.model';
+import { ProductService } from './service/product.service';
+import { Product } from '../shared/models/product-model';
 
 @Component({
   selector: 'app-register',
@@ -12,8 +14,11 @@ export class RegisterComponent implements OnInit {
   userForm: FormGroup = new FormGroup({});
   states: string[] = [];
   finalUser: User = new User();
+  products: Product[] = [];
 
-  constructor(private fb: FormBuilder, private stateService: StateService) { }
+  constructor(private fb: FormBuilder, 
+    private stateService: StateService,
+    private productService: ProductService) { }
   ngOnInit(): void {
     this.states = this.stateService.getStates();
 
@@ -29,6 +34,10 @@ export class RegisterComponent implements OnInit {
     this.states.forEach(() => {
       selectedStates.push(this.fb.control(false));
     })
+
+    this.productService.getProducts().subscribe(data => {
+      this.products = data;
+    });
   }
 
   onStateChange(event: any, index: number) {

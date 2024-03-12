@@ -9,6 +9,7 @@ import { RegisterComponent } from './register/register.component';
 import { NgxMaskDirective, NgxMaskPipe, provideEnvironmentNgxMask } from 'ngx-mask';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { MatTabsModule } from '@angular/material/tabs';
+import { ProductService } from './register/service/product.service';
 
 @NgModule({
   imports: [
@@ -28,6 +29,7 @@ import { MatTabsModule } from '@angular/material/tabs';
   providers: [
     provideEnvironmentNgxMask(),
     provideAnimationsAsync(),
+    ProductService
   ],
   bootstrap: [AppComponent],
 })
