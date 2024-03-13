@@ -10,6 +10,7 @@ import { NgxMaskDirective, NgxMaskPipe, provideEnvironmentNgxMask } from 'ngx-ma
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { MatTabsModule } from '@angular/material/tabs';
 import { ProductService } from './register/service/product.service';
+import { ProductComponent } from './register/product/product.component';
 
 @NgModule({
   imports: [
@@ -20,11 +21,12 @@ import { ProductService } from './register/service/product.service';
     NgxMaskDirective, 
     NgxMaskPipe,
     ReactiveFormsModule,
-    MatTabsModule
+    MatTabsModule,
   ],
   declarations: [
       AppComponent,
-      RegisterComponent
+      RegisterComponent,
+      ProductComponent
   ],
   providers: [
     provideEnvironmentNgxMask(),

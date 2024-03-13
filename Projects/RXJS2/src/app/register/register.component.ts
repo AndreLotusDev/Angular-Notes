@@ -4,6 +4,7 @@ import { StateService } from './service/state.service';
 import { User } from './models/user.model';
 import { ProductService } from './service/product.service';
 import { Product } from '../shared/models/product-model';
+import {MatSnackBar} from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-register',
@@ -18,7 +19,8 @@ export class RegisterComponent implements OnInit {
 
   constructor(private fb: FormBuilder, 
     private stateService: StateService,
-    private productService: ProductService) { }
+    private productService: ProductService,
+    private _snackBar: MatSnackBar) { }
   ngOnInit(): void {
     this.states = this.stateService.getStates();
 
@@ -59,6 +61,12 @@ export class RegisterComponent implements OnInit {
       if (state.value) {
         selectedStates.push(this.states[index])
       }
+    })
+  }
+
+  onSelected(product: Product) {
+    this._snackBar.open( product.name , 'Close', {
+      duration: 2000
     })
   }
 
