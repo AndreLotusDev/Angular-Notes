@@ -10,7 +10,6 @@ date modified: Monday, March 11th 2024, 11:53:32 pm
 - Implementar validações avançadas de formulário
 - formularios dinamicos em angular
 - criar um modulo sobre roteamento
-- usar o decorator output
 - usar o ng-content para preencher um component dinamicamente
 - usar o ng-content com o select em vez de usar varios ng-content sem select
 - usar um token de identificação num elemento HTML por exemplo: #div
@@ -64,4 +63,5 @@ date modified: Monday, March 11th 2024, 11:53:32 pm
 - Fazer uma validação usando ng2-brazilian npm package
 - Usar o ng2-validation
 - usar o decorator input
+- usar o decorator output
 
