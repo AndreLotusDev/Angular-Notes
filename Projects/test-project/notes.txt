@@ -1,0 +1,1 @@
+This project is just to see how a raw project works to copy the same appearance in the RXJS2 to make tests works
