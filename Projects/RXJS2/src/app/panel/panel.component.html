@@ -1,0 +1,17 @@
+<div class="panel">
+    <div class="panel-title">
+        <ng-content select="[panel-title]"></ng-content>
+    </div>
+
+    <hr/>
+    <div class="panel-content" id="panel-content">
+        <ng-content></ng-content>
+    </div>
+    <hr/>
+
+    <div>
+        <ng-content select="[footer]"></ng-content>
+    </div>
+    <hr/>
+
+</div>

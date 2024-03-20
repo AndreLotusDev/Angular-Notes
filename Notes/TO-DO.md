@@ -2,7 +2,7 @@
 aliases: 
 tags: 
 date created: Monday, February 26th 2024, 4:56:50 pm
-date modified: Wednesday, March 13th 2024, 11:21:25 am
+date modified: Tuesday, March 19th 2024, 10:37:58 pm
 ---
 
 # TODO
@@ -10,8 +10,6 @@ date modified: Wednesday, March 13th 2024, 11:21:25 am
 - Implementar validações avançadas de formulário
 - formularios dinamicos em angular
 - criar um modulo sobre roteamento
-- usar o ng-content para preencher um component dinamicamente
-- usar o ng-content com o select em vez de usar varios ng-content sem select
 - usar um token de identificação num elemento HTML por exemplo: #div
 - Criar um exemplo de uso do ViewChildren, ViewChild (usando um id e usando uma referencia para um tipo de component); ver para que serve os dois, quando usar e quando não usar
 - Criar um modulo com tratamento de rota 404
@@ -64,4 +62,6 @@ date modified: Wednesday, March 13th 2024, 11:21:25 am
 - Usar o ng2-validation
 - usar o decorator input
 - usar o decorator output
+-  usar o ng-content para preencher um component dinamicamente
+- usar o ng-content com o select em vez de usar varios ng-content sem select
 

@@ -11,6 +11,8 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { MatTabsModule } from '@angular/material/tabs';
 import { ProductService } from './register/service/product.service';
 import { ProductComponent } from './register/product/product.component';
+import { PanelComponent } from './panel/panel.component';
+import { PanelAreaComponent } from './panel-area/panel-area.component';
 
 @NgModule({
   imports: [
@@ -26,7 +28,9 @@ import { ProductComponent } from './register/product/product.component';
   declarations: [
       AppComponent,
       RegisterComponent,
-      ProductComponent
+      ProductComponent,
+      PanelComponent,
+      PanelAreaComponent
   ],
   providers: [
     provideEnvironmentNgxMask(),
