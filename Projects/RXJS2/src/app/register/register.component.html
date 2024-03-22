@@ -41,6 +41,10 @@
 
 <hr/>
 
+<div class="flex m-auto w-full">
+    <button class="w-full p-4 btn btn-blue" (click)="removeProduct()">Remover produto</button>
+</div>
+
 <div *ngFor="let product of products" class="flex m-auto items-center align-center justify-center"> 
     <app-product (click)="onSelected(product)" [product]="product"></app-product>
 </div>

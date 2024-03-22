@@ -14,6 +14,8 @@ export class AppComponent implements OnInit, OnDestroy {
   }
   ngOnInit(): void {
 
+
+
     //Generating a runtime error
     // this.myPromise('Andre').then((res) => console.log(res));
 

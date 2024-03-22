@@ -13,6 +13,9 @@ import { ProductService } from './register/service/product.service';
 import { ProductComponent } from './register/product/product.component';
 import { PanelComponent } from './panel/panel.component';
 import { PanelAreaComponent } from './panel-area/panel-area.component';
+import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
+import { productReducer } from './app.reducer';
 
 @NgModule({
   imports: [
@@ -24,6 +27,8 @@ import { PanelAreaComponent } from './panel-area/panel-area.component';
     NgxMaskPipe,
     ReactiveFormsModule,
     MatTabsModule,
+    StoreModule.forRoot({productState: productReducer}),
+    EffectsModule.forRoot([])
   ],
   declarations: [
       AppComponent,

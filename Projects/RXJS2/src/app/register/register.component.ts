@@ -5,6 +5,10 @@ import { User } from './models/user.model';
 import { ProductService } from './service/product.service';
 import { Product } from '../shared/models/product-model';
 import {MatSnackBar} from '@angular/material/snack-bar';
+import { AppState } from '../app.state';
+import { Store } from '@ngrx/store';
+import { loadProducts, removeLastProduct } from '../app.action';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-register',
@@ -16,11 +20,14 @@ export class RegisterComponent implements OnInit {
   states: string[] = [];
   finalUser: User = new User();
   products: Product[] = [];
+  products$: Observable<Product[]> | undefined; 
+  listOfProducts = [];
 
   constructor(private fb: FormBuilder, 
     private stateService: StateService,
     private productService: ProductService,
-    private _snackBar: MatSnackBar) { }
+    private _snackBar: MatSnackBar,
+    private store: Store<AppState>) { }
   ngOnInit(): void {
     this.states = this.stateService.getStates();
 
@@ -40,6 +47,17 @@ export class RegisterComponent implements OnInit {
     this.productService.getProducts().subscribe(data => {
       this.products = data;
     });
+
+    this.store.dispatch(loadProducts());
+
+    this.products$ = this.store.select(state => state.productState.products);
+
+    this.products$.subscribe(data => {
+      console.log(data);
+      this._snackBar.open( data.length + ' products loaded', 'Close', {
+        duration: 2000
+      })
+    })
   }
 
   onStateChange(event: any, index: number) {
@@ -65,9 +83,13 @@ export class RegisterComponent implements OnInit {
   }
 
   onSelected(product: Product) {
-    this._snackBar.open( product.name , 'Close', {
-      duration: 2000
-    })
+    // this._snackBar.open( product.name , 'Close', {
+    //   duration: 2000
+    // })
+  }
+
+  removeProduct() {
+    this.store.dispatch(removeLastProduct());
   }
 
 }
