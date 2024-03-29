@@ -2,14 +2,14 @@
 aliases: 
 tags: 
 date created: Monday, February 26th 2024, 4:56:50 pm
-date modified: Tuesday, March 19th 2024, 10:37:58 pm
+date modified: Friday, March 29th 2024, 6:17:08 am
 ---
 
 # TODO
 
+- Ver as novidades do angular 12, 13, 14, 15, 16, 17
 - Implementar validações avançadas de formulário
 - formularios dinamicos em angular
-- criar um modulo sobre roteamento
 - usar um token de identificação num elemento HTML por exemplo: #div
 - Criar um exemplo de uso do ViewChildren, ViewChild (usando um id e usando uma referencia para um tipo de component); ver para que serve os dois, quando usar e quando não usar
 - Criar um modulo com tratamento de rota 404
@@ -64,4 +64,5 @@ date modified: Tuesday, March 19th 2024, 10:37:58 pm
 - usar o decorator output
 -  usar o ng-content para preencher um component dinamicamente
 - usar o ng-content com o select em vez de usar varios ng-content sem select
+- criar um modulo sobre roteamento
 
