@@ -1,1 +1,15 @@
+<!-- Navigation bar to register and routing outlet using tailwind 2 -->
+<nav class="bg-gray-800 p-2">
+    <div class="container mx-auto flex justify-between">
+        <a routerLink="/" class="text-white font-bold">RxJS</a>
+        <div class="flex">
+            <a routerLink="/register" class="text-white px-2">Register</a>
+            <!-- Routing -->
+            <a routerLink="/routing-outlet" class="text-white px-2">Routing</a>
+        </div>
+    </div>
+</nav>
+
 <router-outlet></router-outlet>
+
+<hr/>

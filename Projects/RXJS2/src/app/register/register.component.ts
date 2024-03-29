@@ -9,6 +9,7 @@ import { AppState } from '../app.state';
 import { Store } from '@ngrx/store';
 import { loadProducts, removeLastProduct } from '../app.action';
 import { Observable } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -27,7 +28,8 @@ export class RegisterComponent implements OnInit {
     private stateService: StateService,
     private productService: ProductService,
     private _snackBar: MatSnackBar,
-    private store: Store<AppState>) { }
+    private store: Store<AppState>,
+    private route: Router) { }
   ngOnInit(): void {
     this.states = this.stateService.getStates();
 

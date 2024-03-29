@@ -1,39 +1,36 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { RouterModule } from '@angular/router';
+import { ReactiveFormsModule } from '@angular/forms';
 
-import { AppRoutingModule, routes } from './app.routes';
+import { AppRoutingModule } from './app.routes';
 import { AppComponent } from './app.component';
-import { RegisterComponent } from './register/register.component';
 import { NgxMaskDirective, NgxMaskPipe, provideEnvironmentNgxMask } from 'ngx-mask';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { MatTabsModule } from '@angular/material/tabs';
 import { ProductService } from './register/service/product.service';
-import { ProductComponent } from './register/product/product.component';
 import { PanelComponent } from './panel/panel.component';
 import { PanelAreaComponent } from './panel-area/panel-area.component';
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { productReducer } from './app.reducer';
+import { RoutingOutletModule } from './routing-outlet/routing-outlet.module';
+import { RegisterModule } from './register/register.module';
 
 @NgModule({
   imports: [
     BrowserModule,
-    FormsModule,
-    ReactiveFormsModule,
     AppRoutingModule,
     NgxMaskDirective, 
     NgxMaskPipe,
     ReactiveFormsModule,
     MatTabsModule,
     StoreModule.forRoot({productState: productReducer}),
-    EffectsModule.forRoot([])
+    EffectsModule.forRoot([]),
+    RoutingOutletModule,
+    RegisterModule
   ],
   declarations: [
       AppComponent,
-      RegisterComponent,
-      ProductComponent,
       PanelComponent,
       PanelAreaComponent
   ],
@@ -41,6 +38,9 @@ import { productReducer } from './app.reducer';
     provideEnvironmentNgxMask(),
     provideAnimationsAsync(),
     ProductService
+  ],
+  exports: [
+    
   ],
   bootstrap: [AppComponent],
 })
