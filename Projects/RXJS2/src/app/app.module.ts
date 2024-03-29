@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
-import { routes } from './app.routes';
+import { AppRoutingModule, routes } from './app.routes';
 import { AppComponent } from './app.component';
 import { RegisterComponent } from './register/register.component';
 import { NgxMaskDirective, NgxMaskPipe, provideEnvironmentNgxMask } from 'ngx-mask';
@@ -22,7 +22,7 @@ import { productReducer } from './app.reducer';
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    RouterModule.forRoot(routes),
+    AppRoutingModule,
     NgxMaskDirective, 
     NgxMaskPipe,
     ReactiveFormsModule,
