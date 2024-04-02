@@ -2,11 +2,16 @@
 aliases: 
 tags: 
 date created: Monday, February 26th 2024, 4:56:50 pm
-date modified: Friday, March 29th 2024, 6:17:08 am
+date modified: Friday, March 29th 2024, 7:52:40 am
 ---
 
 # TODO
 
+- aprender a dar wrap no code para embrulhar, assim como tem no flutter
+- aprender como criar modulos com o schematic
+- Usar storage no angular
+- Aprender ngflex module e fazer um layout flexivel
+	- https://stackblitz.com/github/jbojcic1/angular-routing-example/tree/routing-reuse-layout-example-3-with-subscribing-to-route-events?file=src%2Fapp%2Flogin%2Flogin.component.html
 - Ver as novidades do angular 12, 13, 14, 15, 16, 17
 - Implementar validações avançadas de formulário
 - formularios dinamicos em angular

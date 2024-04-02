@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { FormArray, FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { StateService } from './service/state.service';
 import { User } from './models/user.model';
@@ -24,8 +24,9 @@ export class RegisterComponent implements OnInit {
   products$: Observable<Product[]> | undefined; 
   listOfProducts = [];
 
+  stateService = inject(StateService);
+
   constructor(private fb: FormBuilder, 
-    private stateService: StateService,
     private productService: ProductService,
     private _snackBar: MatSnackBar,
     private store: Store<AppState>,

@@ -2,8 +2,14 @@
 aliases: 
 tags: 
 date created: Friday, March 1st 2024, 2:50:16 am
-date modified: Friday, March 1st 2024, 3:01:44 am
+date modified: Saturday, March 30th 2024, 10:54:51 am
 ---
+---
+
+A priori o RxJS foi lançada oficialmente ocmo Reactive Extensions, e era originalmente somente dedicada para o .NET como rx.NET
+
+---
+
 o RX JS é o gerenciador de estado official do angular.
 
 O NGRX é responsável para gestão de estado.
