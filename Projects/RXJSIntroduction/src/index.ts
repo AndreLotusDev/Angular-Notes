@@ -1,21 +1,13 @@
-import { Operators } from "./operators";
-import { ObservableEvents } from "./observableEvents";
+import { MapOperator } from "./mapOperator";
+import { SwitchMap } from "./switchMap";
 
 function component() {
-    // let operators = new Operators();
+    let switchMapHandler = new SwitchMap();
 
-    // console.log('filtering');
-    // operators.filterByEvenNumbers();
+    switchMapHandler.execute();
 
-    // console.log('pow by 2');
-    // operators.powBy2Numbers();
-
-    let observableFromEvents = new ObservableEvents();
-    // console.log('mouse on event');
-    // observableFromEvents.executeOnMouseMove();
-
-    console.log('mouse on event with delay');
-    observableFromEvents.makeRedDotFollowMouseWithDelay();
+    let mapOperator = new MapOperator();
+    mapOperator.getPowFromSourceNumbers();
 }
 
 component();
