@@ -13,7 +13,7 @@ function component() {
 
     let filterOperator = new FilterOperator();
     filterOperator.getOddNumbersFromSource();
-
+    
     let takeOperator = new TakeOperator();
     takeOperator.takeTheThreeFirstNumbers();
 }
