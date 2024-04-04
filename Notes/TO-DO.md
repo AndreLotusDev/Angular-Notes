@@ -2,12 +2,13 @@
 aliases: 
 tags: 
 date created: Monday, February 26th 2024, 4:56:50 pm
-date modified: Friday, March 29th 2024, 7:52:40 am
+date modified: Tuesday, April 2nd 2024, 7:18:30 pm
 ---
 
 # TODO
 
 - aprender a dar wrap no code para embrulhar, assim como tem no flutter
+- criar um pipe async no angular
 - aprender como criar modulos com o schematic
 - Usar storage no angular
 - Aprender ngflex module e fazer um layout flexivel
