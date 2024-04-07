@@ -1,0 +1,9 @@
+.button-area {
+    display: flex;
+    justify-content: center;
+}
+
+.button-area button {
+    margin: 10px;
+    padding: 10px;
+}
