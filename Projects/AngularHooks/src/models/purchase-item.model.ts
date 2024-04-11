@@ -1,8 +1,15 @@
-export interface PurchaseItem {
+export class PurchaseItem {
     id: number;
     name: string;
     quantity: number;
     price: number;
+
+    constructor(id: number = 0, name: string = '', quantity: number = 0, price: number = 0) {
+        this.id = id;
+        this.name = name;
+        this.quantity = quantity;
+        this.price = price;
+    }
 }
 
 export function SeedPurchaseItems() {

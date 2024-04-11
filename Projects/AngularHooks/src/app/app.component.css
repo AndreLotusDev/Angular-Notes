@@ -1,0 +1,6 @@
+/* Create a input hidden arrows up down */
+.form-control::-webkit-outer-spin-button,
+.form-control::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
