@@ -40,3 +40,13 @@ export class FormTrigger {
         ])
     ])
 }
+
+export class CheckButtonTrigger {
+    static trigger = trigger('checkButton', [
+        transition('* => checked', [
+            animate('400ms ease-in', style({
+                transform: 'scale(0.4)'
+            }))
+        ])
+    ])
+}
