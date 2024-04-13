@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
-import { animate, state, style, transition, trigger } from '@angular/animations';
 import { TarefaService } from 'src/app/service/tarefa.service';
+import { FormTrigger, HighlighTrigger } from '../animations';
 import { Tarefa } from '../interface/tarefa';
 
 @Component({
@@ -11,21 +11,8 @@ import { Tarefa } from '../interface/tarefa';
   templateUrl: './lista-tarefas.component.html',
   styleUrls: ['./lista-tarefas.component.css'],
   animations: [
-    trigger('highlight', [
-      state(
-        'default',
-        style({
-          border: '1px solid black',
-        })
-      ),
-      state(
-        'highlighted',
-        style({
-          border: '3px dashed red',
-        })
-      ),
-      transition('default => highlighted', [animate(100)]),
-  ])
+    HighlighTrigger.trigger,
+    FormTrigger.trigger,
   ],
 })
 export class ListaTarefasComponent implements OnInit {
