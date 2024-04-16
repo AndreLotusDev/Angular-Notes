@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
+import { fadeInOnEnterAnimation, fadeOutOnLeaveAnimation } from 'angular-animations';
 import { TarefaService } from 'src/app/service/tarefa.service';
 import { CheckButtonTrigger, FormTrigger, HighlighTrigger } from '../animations';
 import { Tarefa } from '../interface/tarefa';
@@ -14,6 +15,8 @@ import { Tarefa } from '../interface/tarefa';
     HighlighTrigger.trigger,
     FormTrigger.trigger,
     CheckButtonTrigger.trigger,
+    fadeInOnEnterAnimation(),
+    fadeOutOnLeaveAnimation()
   ],
 })
 export class ListaTarefasComponent implements OnInit {
@@ -36,7 +39,7 @@ export class ListaTarefasComponent implements OnInit {
     private service: TarefaService,
     private router: Router,
     private fomBuilder: FormBuilder
-  ) {}
+  ) { }
 
   ngOnInit(): Tarefa[] {
     this.service.listar(this.categoria).subscribe((listaTarefas) => {
