@@ -6,7 +6,9 @@
     </button>
   </div>
 
-  <form class="formulario ff-prompt" @shownState [formGroup]="formulario" *ngIf="formAberto">
+  <form class="formulario ff-prompt" 
+    [@fadeInOnEnter] [@fadeOutOnLeave] 
+    [formGroup]="formulario" *ngIf="formAberto">
     <label for="descricao">Descrição da tarefa</label>
     <input required type="text" formControlName="descricao" placeholder="Digite a tarefa"
       [ngClass]="campoValidado('descricao')">
@@ -63,9 +65,10 @@
   </div>
 
   <div *ngIf="listaTarefas.length > 0, else semTarefas">
+    <!-- (mouseenter)="indexTarefaAtual = i" (mouseleave)="indexTarefaAtual = -1"
+      [@highlight]="indexTarefaAtual === i ? 'highlighted' : 'default'" -->
     <div class="lista-tarefas card-{{ tarefa.categoria }}" *ngFor="let tarefa of listaTarefas; index as i"
-      (mouseenter)="indexTarefaAtual = i" (mouseleave)="indexTarefaAtual = -1"
-      [@highlight]="indexTarefaAtual === i ? 'highlighted' : 'default'">
+      >
       <div class="info-card">
 
         <p class="categoria-tarefa categoria-{{ tarefa.categoria }}">

@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 
 import { fadeInOnEnterAnimation, fadeOutOnLeaveAnimation } from 'angular-animations';
 import { TarefaService } from 'src/app/service/tarefa.service';
-import { CheckButtonTrigger, FormTrigger, HighlighTrigger } from '../animations';
+import { CheckButtonTrigger, HighlighTrigger } from '../animations';
 import { Tarefa } from '../interface/tarefa';
 
 @Component({
@@ -13,7 +13,7 @@ import { Tarefa } from '../interface/tarefa';
   styleUrls: ['./lista-tarefas.component.css'],
   animations: [
     HighlighTrigger.trigger,
-    FormTrigger.trigger,
+    // FormTrigger.trigger,
     CheckButtonTrigger.trigger,
     fadeInOnEnterAnimation(),
     fadeOutOnLeaveAnimation()
@@ -39,7 +39,10 @@ export class ListaTarefasComponent implements OnInit {
     private service: TarefaService,
     private router: Router,
     private fomBuilder: FormBuilder
-  ) { }
+  ) 
+  { 
+
+  }
 
   ngOnInit(): Tarefa[] {
     this.service.listar(this.categoria).subscribe((listaTarefas) => {
