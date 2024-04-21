@@ -2,7 +2,7 @@
 aliases: 
 tags: 
 date created: Saturday, April 20th 2024, 10:36:51 pm
-date modified: Saturday, April 20th 2024, 11:08:52 pm
+date modified: Saturday, April 20th 2024, 11:23:38 pm
 ---
 Formulario por variavel:
 
@@ -35,3 +35,50 @@ export class SeuComponenteComponent {
 	<button type="submit">Enviar</button> 
 </form>
 ```
+
+---
+
+É possivel usar o ngModel sem apontar para uma variavel:
+
+```javascript
+<form #f="ngForm"> <input type="text" name="usuario" ngModel> <button type="submit">Enviar</button> </form>
+```
+
+```javascript
+import { NgForm } from '@angular/forms';
+
+@Component({
+  selector: 'app-seu-componente',
+  templateUrl: './seu-componente.component.html',
+  styleUrls: ['./seu-componente.component.css']
+})
+export class SeuComponenteComponent {
+  constructor() { }
+
+  onSubmit(form: NgForm) {
+    console.log('Valor do usuário:', form.value.usuario);
+    // Acessa o valor do campo "usuario"
+  }
+}
+```
+
+Com validação
+
+```javascript
+.erro {
+  color: red;
+}
+
+<form #f="ngForm" novalidate>
+  <input type="text" name="usuario" ngModel #usuario="ngModel" required minlength="2">
+  <div *ngIf="usuario.errors && (usuario.dirty || usuario.touched)" style="color: red;">
+    <p *ngIf="usuario.errors.required">O campo é obrigatório.</p>
+    <p *ngIf="usuario.errors.minlength">O campo deve ter pelo menos 2 caracteres.</p>
+  </div>
+  <button type="submit" [disabled]="!f.valid">Enviar</button>
+</form>
+
+```
+
+---
+
