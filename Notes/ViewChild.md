@@ -2,7 +2,7 @@
 aliases: 
 tags: 
 date created: Wednesday, April 24th 2024, 12:29:51 am
-date modified: Wednesday, April 24th 2024, 12:30:51 am
+date modified: Wednesday, April 24th 2024, 12:40:33 am
 ---
 O viewchild é muito importante pois muitas coisas não conseguimos fazer diretamente com angular, ai com o viewchild conseguimos alterar esses elementos da DOM usando raw javascript + dom.
 
@@ -22,3 +22,45 @@ export class AppComponent {
   }
 }
 ```
+
+---
+
+Exemplo de como colocar e tirar borda de um componente filho usando view child
+
+```javascript
+<div #boxDiv (mouseover)="addBorder()" (mouseout)="removeBorder()">
+    Passe o mouse sobre mim!
+</div>
+```
+
+```javascript
+import { Component, ViewChild, ElementRef } from '@angular/core';
+
+@Component({
+  selector: 'app-exemplo',
+  templateUrl: './exemplo.component.html',
+  styleUrls: ['./exemplo.component.css']
+})
+export class ExemploComponent {
+  @ViewChild('boxDiv') boxDiv!: ElementRef;
+
+  addBorder(): void {
+    this.boxDiv.nativeElement.style.border = '2px solid blue';
+  }
+
+  removeBorder(): void {
+    this.boxDiv.nativeElement.style.border = 'none';
+  }
+}
+```
+
+```javascript
+div {
+  padding: 10px;
+  transition: border 0.3s ease;
+}
+
+```
+
+---
+
