@@ -21,12 +21,12 @@ To get started with this project, follow these steps:
 
 1. **Clone the Repository**: Clone this repository to your local machine using the following command:
    ```
-   git clone https://github.com/your-username/angular-study-group.git
+   git clone https://github.com/AndreLotusDev/Angular-Notes
    ```
 
 2. **Install Dependencies**: Navigate to the project directory and install the dependencies using npm:
    ```
-   cd angular-study-group
+   cd SPECIFIC_PATH
    npm install
    ```
 
@@ -34,8 +34,6 @@ To get started with this project, follow these steps:
    ```
    npm start
    ```
-
-4. **Explore and Learn**: Explore the project's codebase, experiment with Angular concepts, and collaborate with other members of the study group.
 
 ## License
 
