@@ -1,4 +1,4 @@
-# Angular Study Group
+# Angular 
 
 Welcome to the Angular Notes repository! This project is a collaborative effort aimed at learning and exploring the Angular framework. Whether you're a beginner looking to get started or an experienced developer seeking to deepen your understanding, this repository provides a platform for learning, sharing knowledge, and collaborating with others interested in Angular development.
 
