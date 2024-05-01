@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { UsuarioModel } from '../../models/usuario.model';
-import { UsuarioService } from '../../repository/usuario.service';
+import { UserModel } from '../../models/user.model';
+import { UserService } from '../../repository/user.service';
 
 @Component({
   selector: 'app-list-users',
@@ -9,18 +9,18 @@ import { UsuarioService } from '../../repository/usuario.service';
 })
 export class ListUsersComponent implements OnInit {
 
-  users: UsuarioModel[] = [];
-  constructor(private usuarioService: UsuarioService) { }
+  users: UserModel[] = [];
+  constructor(private userService: UserService) { }
 
   ngOnInit() {
-    this.usuarioService.getUsers().subscribe(
-      users => this.users = users
-    )
+    this.userService.getUsers().subscribe((users) => {
+      this.users = users;
+    })
   }
 
   deleteUser(id: number) {
     this.users = this.users.filter(user => user.id !== id);
-    this.usuarioService.deleteUser(id).subscribe();
+    this.userService.deleteUser(id).subscribe();
   }
 
 }

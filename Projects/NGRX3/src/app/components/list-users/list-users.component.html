@@ -16,12 +16,12 @@
 
     <tr *ngFor="let user of users">
       <td>{{user.id}}</td>
-      <td>{{user.nome}}</td>
-      <td>{{user.idade}}</td>
-      <td>{{user.perfil}}</td>
+      <td>{{user.name}}</td>
+      <td>{{user.age}}</td>
+      <td>{{user.profile}}</td>
       <td><button class="btn btn-outline-primary" (click)="deleteUser(user.id)">Deletar</button></td>
     </tr>
 
   </tbody>
 
-</table>
+</table>|

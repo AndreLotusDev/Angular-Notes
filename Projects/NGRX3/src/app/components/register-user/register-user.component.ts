@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { UsuarioModel as UserModel } from '../../models/usuario.model';
-import { UsuarioService as UserService } from '../../repository/usuario.service';
+import { UserModel } from '../../models/user.model';
+import { UserService } from '../../repository/user.service';
 
 @Component({
   selector: 'app-register-user',
@@ -19,9 +19,9 @@ export class RegisterUserComponent implements OnInit {
   ngOnInit() {
     this.userForm = new FormGroup({
       'id': new FormControl(0, Validators.required),
-      'nome': new FormControl('Andre', Validators.required),
-      'idade': new FormControl(89, [Validators.required, Validators.min(1)]),
-      'perfil': new FormControl('Administrador', Validators.required)
+      'name': new FormControl('Andre', Validators.required),
+      'age': new FormControl(89, [Validators.required, Validators.min(1)]),
+      'profile': new FormControl('Administrador', Validators.required)
     });
   }
 
@@ -29,9 +29,9 @@ export class RegisterUserComponent implements OnInit {
     const id = this.userForm.get('id')?.value;
     let userModel: UserModel = {
       id: this.userForm.get('id')?.value,
-      nome: this.userForm.get('nome')?.value,
-      idade: this.userForm.get('idade')?.value,
-      perfil: this.userForm.get('perfil')?.value
+      name: this.userForm.get('name')?.value,
+      age: this.userForm.get('age')?.value,
+      profile: this.userForm.get('profile')?.value
     }
 
     if (id) {

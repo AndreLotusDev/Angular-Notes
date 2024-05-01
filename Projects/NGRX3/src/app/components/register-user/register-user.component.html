@@ -7,17 +7,17 @@
 
   <div class="mb-3">
     <label for="nome" class="form-label">Nome</label>
-    <input type="text" class="form-control" id="nome" formControlName="nome">
+    <input type="text" class="form-control" id="nome" formControlName="name">
   </div>
 
   <div class="mb-3">
     <label for="idade" class="form-label">Idade</label>
-    <input type="number" class="form-control" id="idade" formControlName="idade">
+    <input type="number" class="form-control" id="idade" formControlName="age">
   </div>
 
   <div class="mb-3">
     <label for="perfil" class="form-label">Perfil</label>
-    <input type="text" class="form-control" id="perfil" formControlName="perfil">
+    <input type="text" class="form-control" id="perfil" formControlName="profile">
   </div>
 
   <button type="submit" class="btn btn-primary" [disabled]="!userForm.valid">Salvar</button>

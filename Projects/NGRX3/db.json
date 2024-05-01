@@ -2,33 +2,33 @@
   "Usuarios": [
     {
       "id": 1,
-      "nome": "João",
-      "idade": 30,
-      "perfil": "Administrador"
+      "name": "João",
+      "age": 30,
+      "profile": "admin"
     },
     {
       "id": 2,
-      "nome": "Maria",
-      "idade": 25,
-      "perfil": "Diretor"
+      "name": "Maria",
+      "age": 25,
+      "profile": "director"
     },
     {
       "id": 3,
-      "nome": "Pedro",
-      "idade": 35,
-      "perfil": "Consultor"
+      "name": "Pedro",
+      "age": 35,
+      "profile": "consultant"
     },
     {
       "id": 4,
-      "nome": "Andre",
-      "idade": 90,
-      "perfil": "Administrador"
+      "name": "Andre",
+      "age": 90,
+      "profile": "admin"
     },
     {
       "id": 5,
-      "nome": "Samira",
-      "idade": 89,
-      "perfil": "Administrador"
+      "name": "Samira",
+      "age": 89,
+      "profile": "admin"
     }
   ]
 }
