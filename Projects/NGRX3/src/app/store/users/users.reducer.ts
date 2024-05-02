@@ -4,7 +4,7 @@ import * as fromUserAction from './users.actions';
 
 export interface UserState {
     users: UserModel[];
-    user: UserModel;
+    user: UserModel | null;
     error: string | '';
 }
 
@@ -16,7 +16,7 @@ export const initialState : UserState = {
         age: 0,
         profile: ''
     },
-    error: ''
+    error: '',
 }
 
 const _userReducer = createReducer(
@@ -50,27 +50,32 @@ const _userReducer = createReducer(
     on(fromUserAction.addUserSuccess, (state, { payload }) => {
         return {
             ...state,
-            users: [...state.users, payload]
+            users: [...state.users, payload],
+            user: null
         }
     }),
     on(fromUserAction.addUserFail, (state, { error }) => {
         return {
             ...state,
-            error
+            error,
+            user: null
         }
     }),
 
     on(fromUserAction.updateUserSuccess, (state, { payload }) => {
-        return {
+        let newState = {
             ...state,
-            user: payload,
-            users: state.users.map(user => user.id === payload.id ? payload : user)
+            users: state.users.map(user => user.id === payload.id ? payload : user),
+            user: null,
         }
+
+        return newState;
     }),
     on(fromUserAction.updateUserFail, (state, { error }) => {
         return {
             ...state,
-            error
+            user: null,
+            error,
         }
     }),
 

@@ -16,11 +16,11 @@
       "id": 3,
       "name": "Pedro",
       "age": 35,
-      "profile": "consultant"
+      "profile": "consultant temporary"
     },
     {
       "id": 4,
-      "name": "Andre",
+      "name": "Andre Soares",
       "age": 90,
       "profile": "admin"
     },

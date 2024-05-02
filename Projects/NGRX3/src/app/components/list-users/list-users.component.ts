@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { Observable } from 'rxjs';
 import { UserModel } from '../../models/user.model';
-import { UserService } from '../../repository/user.service';
+import { AppState } from '../../store/users/app.state';
+import * as fromUsersAction from '../../store/users/users.actions';
+import * as fromUserSelector from '../../store/users/users.reducer';
 
 @Component({
   selector: 'app-list-users',
@@ -9,18 +13,25 @@ import { UserService } from '../../repository/user.service';
 })
 export class ListUsersComponent implements OnInit {
 
-  users: UserModel[] = [];
-  constructor(private userService: UserService) { }
+  users$: Observable<UserModel[]> = this.store.select(fromUserSelector.getUsers);
+
+  constructor(
+    private store: Store<AppState>
+  ) 
+  { 
+
+  }
 
   ngOnInit() {
-    this.userService.getUsers().subscribe((users) => {
-      this.users = users;
-    })
+    this.store.dispatch(fromUsersAction.loadUsers());
   }
 
   deleteUser(id: number) {
-    this.users = this.users.filter(user => user.id !== id);
-    this.userService.deleteUser(id).subscribe();
+    this.store.dispatch(fromUsersAction.deleteUser({ payload: id }));
+  }
+
+  editUser(user: UserModel) {
+    this.store.dispatch(fromUsersAction.loadUser({ payload: user.id }));
   }
 
 }

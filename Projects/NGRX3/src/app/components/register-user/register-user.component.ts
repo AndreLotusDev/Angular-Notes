@@ -1,22 +1,54 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Store } from '@ngrx/store';
+import { Observable } from 'rxjs';
 import { UserModel } from '../../models/user.model';
-import { UserService } from '../../repository/user.service';
+import { AppState } from '../../store/users/app.state';
+import * as fromUserActions from '../../store/users/users.actions';
+import * as fromUserReducers from '../../store/users/users.reducer';
 
 @Component({
   selector: 'app-register-user',
   templateUrl: './register-user.component.html',
   styleUrls: ['./register-user.component.css']
 })
-export class RegisterUserComponent implements OnInit {
+export class RegisterUserComponent implements OnInit, OnDestroy {
 
   userForm!: FormGroup;
+  user$: Observable<UserModel | null> = this.store.select(fromUserReducers.getUser);
 
-  constructor(private userService: UserService) {
+  constructor(private store: Store<AppState>) {
 
+  }
+  ngOnDestroy(): void {
+    
   }
 
   ngOnInit() {
+    this.buildForm();
+
+    this.user$.subscribe(user => {
+      if (user) {
+        this.userForm.patchValue({
+          'id': user.id,
+          'name': user.name,
+          'age': user.age,
+          'profile': user.profile
+        });
+      } else if(user == null ){
+
+        alert('updated with success');
+        this.userForm.patchValue({
+          'id': 0,
+          'name': '',
+          'age': 0,
+          'profile': ''
+        });
+      }
+    })
+  }
+
+  private buildForm() {
     this.userForm = new FormGroup({
       'id': new FormControl(0, Validators.required),
       'name': new FormControl('Andre', Validators.required),
@@ -35,13 +67,9 @@ export class RegisterUserComponent implements OnInit {
     }
 
     if (id) {
-      this.userService.updateUser(userModel).subscribe(
-        
-      );
+      this.store.dispatch(fromUserActions.updateUser({ payload: userModel }));
     } else {
-      this.userService.addUser(userModel).subscribe(
-        
-      );
+      this.store.dispatch(fromUserActions.addUser({ payload: userModel }));
     }
   }
 

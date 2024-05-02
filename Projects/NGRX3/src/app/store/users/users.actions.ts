@@ -89,6 +89,7 @@ export const updateUserFail = createAction(
 
 export const deleteUser = createAction(
     userTypesActions.DELETE_USER,
+    props<{ payload: number }>()
 )
 
 export const deleteUserSuccess = createAction(
