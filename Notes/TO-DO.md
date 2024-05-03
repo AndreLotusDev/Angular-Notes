@@ -2,11 +2,15 @@
 aliases: 
 tags: 
 date created: Monday, February 26th 2024, 4:56:50 pm
-date modified: Tuesday, April 2nd 2024, 7:18:30 pm
+date modified: Friday, May 3rd 2024, 11:01:38 am
 ---
 
 # TODO
 
+- Usar o switch case flow syntax
+- Estudar o novo for e loop iterator do angular e a expressao @empty {}
+- Estudar o que é tracking function usada nos iterators do angular
+- Implementar o uso do $first, $last, $index, $odd, $even
 - aprender a dar wrap no code para embrulhar, assim como tem no flutter
 - criar um pipe async no angular
 - aprender como criar modulos com o schematic

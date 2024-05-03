@@ -37,7 +37,6 @@ export class RegisterUserComponent implements OnInit, OnDestroy {
         });
       } else if(user == null ){
 
-        alert('updated with success');
         this.userForm.patchValue({
           'id': 0,
           'name': '',
