@@ -2,7 +2,7 @@
 aliases: 
 tags: 
 date created: Wednesday, April 24th 2024, 12:29:51 am
-date modified: Wednesday, April 24th 2024, 12:40:33 am
+date modified: Sunday, May 5th 2024, 7:29:56 pm
 ---
 O viewchild é muito importante pois muitas coisas não conseguimos fazer diretamente com angular, ai com o viewchild conseguimos alterar esses elementos da DOM usando raw javascript + dom.
 
@@ -61,6 +61,10 @@ div {
 }
 
 ```
+
+É importante lembrar que durante o constructor e onInit um viewchild ainda não ´é presente, somente quando terminamos a inicialização completa do componente que ai sim o ViewChild é populado e pode se manusear ele.
+
+Caso você precise utilizar ele logo após ele inicializar é sempre bom chamar o metodo ngAterViewInit(), assim teremos certeza que ele pelo menos inicializou.
 
 ---
 

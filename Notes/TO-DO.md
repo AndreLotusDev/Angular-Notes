@@ -2,11 +2,12 @@
 aliases: 
 tags: 
 date created: Monday, February 26th 2024, 4:56:50 pm
-date modified: Friday, May 3rd 2024, 11:01:38 am
+date modified: Sunday, May 5th 2024, 2:10:55 pm
 ---
 
 # TODO
 
+- Como usar funcao sem onerar no template syntax
 - Usar o switch case flow syntax
 - Estudar o novo for e loop iterator do angular e a expressao @empty {}
 - Estudar o que é tracking function usada nos iterators do angular
