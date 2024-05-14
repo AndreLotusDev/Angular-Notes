@@ -2,4 +2,6 @@
 
 <hr/>
 
-<p borderHighlightDirective class="special">This is a second paragraph of text</p>
+<p borderHighlightDirective #border="bhd">This is a second paragraph of text</p>
+
+<button (dblclick)="border.toggle()">Double click me!</button>

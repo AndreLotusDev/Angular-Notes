@@ -1,7 +1,8 @@
-import { Directive, HostBinding, HostListener, Input, OnInit } from '@angular/core';
+import { Directive, HostBinding, HostListener, OnInit } from '@angular/core';
 
 @Directive({
   selector: '[borderHighlightDirective]',
+  exportAs: 'bhd'
 })
 export class BorderHighlightDirectiveDirective implements OnInit {
 
@@ -18,11 +19,9 @@ export class BorderHighlightDirectiveDirective implements OnInit {
   }
   private border!: string
 
-  @HostBinding('class') get setClass() {
-    return this.class
-  } 
-  
-  @Input()class!: string
+  public toggle() {
+    this.border = this.border === '5px solid yellow' ? '5px solid transparent' : '5px solid yellow'
+  }
 
   constructor() { }
 
