@@ -2,7 +2,7 @@
 aliases: 
 tags: 
 date created: Monday, May 13th 2024, 10:40:02 pm
-date modified: Tuesday, May 14th 2024, 11:22:44 pm
+date modified: Tuesday, May 14th 2024, 11:35:49 pm
 ---
 É possível usar uma tag chamada export as
 
@@ -101,3 +101,48 @@ Ele desembrulha por meio de uma syntax sugar algo simples para algo mais complex
 
 ---
 
+Um exemplo de syntax usando (\*\) é inverter ngIf com o ngUnless
+
+Implementação:
+
+```javascript
+import { Directive, Input, TemplateRef, ViewContainerRef } from '@angular/core';
+
+@Directive({
+  selector: '[ngUnless]'
+})
+
+export class NgUnlessDirective {
+
+  visible!: boolean;
+
+  constructor(
+    private _templateRef: TemplateRef<any>,
+    private viewContainer: ViewContainerRef
+  ) {}
+
+  @Input()
+  set ngUnless(condition: boolean) {
+
+    if (!condition && !this.visible) {
+
+      this.viewContainer.createEmbeddedView(this._templateRef);
+
+      this.visible = true;
+      
+    } else if (condition && this.visible) {
+
+      this.viewContainer.clear();
+
+      this.visible = false;
+    }
+  }
+  
+}
+```
+
+Implementação no HTML:
+
+```html
+<div *ngUnless="false">This is a div to test ngUnless</div>
+```
