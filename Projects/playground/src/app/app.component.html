@@ -1,11 +1,22 @@
-<p hoverHighlight>This is a paragraph of text</p>
 
-<hr/>
+<div class="flex col-12 col-md-12 col-lg-12 align-center justify-center text-center">
+    <p hoverHighlight>This is a paragraph of text</p>
 
-<p borderHighlightDirective #border="bhd">This is a second paragraph of text</p>
+    <hr />
 
-<button (dblclick)="border.toggle()">Double click me!</button>
+    <p borderHighlightDirective #border="bhd">This is a second paragraph of text</p>
 
-<hr/>
+    <button class="btn btn-success" (dblclick)="border.toggle()">Double click me!</button>
 
-<div *ngUnless="false">This is a div to test ngUnless</div>
+    <hr />
+
+    <div *ngUnless="false">This is a div to test ngUnless</div>
+
+    <hr />
+
+    <app-host-selector>
+
+    </app-host-selector>
+
+    <hr />
+</div>

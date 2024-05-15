@@ -1,0 +1,5 @@
+:host div {
+    border: solid 1px black;
+    padding: 100px;
+    border-style: dotted;
+}
