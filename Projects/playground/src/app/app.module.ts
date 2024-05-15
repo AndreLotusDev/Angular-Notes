@@ -3,14 +3,16 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BorderHighlightDirectiveDirective } from './border-highlight-directive/border-highlight-directive';
-import { HoverHighlightDirective } from './hover-highlight/hover-highlight.directive';
+import { BorderHighlightDirectiveDirective } from './directives/border-highlight-directive/border-highlight-directive';
+import { HoverHighlightDirective } from './directives/hover-highlight/hover-highlight.directive';
+import { NgUnlessDirective } from './directives/ngUnless.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     HoverHighlightDirective,
-    BorderHighlightDirectiveDirective
+    BorderHighlightDirectiveDirective,
+    NgUnlessDirective
   ],
   imports: [
     BrowserModule,
