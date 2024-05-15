@@ -3,3 +3,9 @@
     padding: 100px;
     border-style: dotted;
 }
+
+:host ::ng-deep h2 {
+    border: solid 1px black;
+    padding: 100px;
+    border-style: dashed;
+}
