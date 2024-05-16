@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { H2Component } from './components/h2/h2.component';
 import { HostSelectorComponent } from './components/host-selector/host-selector.component';
+import { ProductComponent } from './components/product/product.component';
 import { BorderHighlightDirectiveDirective } from './directives/border-highlight-directive/border-highlight-directive';
 import { HoverHighlightDirective } from './directives/hover-highlight/hover-highlight.directive';
 import { NgUnlessDirective } from './directives/ngUnless.directive';
@@ -14,6 +15,7 @@ import { NgUnlessDirective } from './directives/ngUnless.directive';
     AppComponent,
     HostSelectorComponent,
     H2Component,
+    ProductComponent,
     HoverHighlightDirective,
     BorderHighlightDirectiveDirective,
     NgUnlessDirective
