@@ -1,12 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { delay } from 'rxjs/operators';
-
-export interface Product {
-  name: string;
-  description: string;
-  price: number;
-}
+import { Product } from '../models/product.model';
 
 @Injectable({
   providedIn: 'root'
