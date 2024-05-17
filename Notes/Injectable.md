@@ -2,9 +2,9 @@
 aliases: 
 tags: 
 date created: Thursday, May 16th 2024, 9:28:45 pm
-date modified: Thursday, May 16th 2024, 9:28:50 pm
+date modified: Friday, May 17th 2024, 12:03:03 am
 ---
-Quando especificamos o serviço com o decorator injectable queremos dizer que ele pode ser provido com o injetor de dependencia nativo do Angular.
+Quando especificamos o serviço com o decorator injectable queremos dizer que ele pode set provido com o injetor de dependencia nativo do Angular.
 
 Exemplo:
 
@@ -19,7 +19,7 @@ export class UserService {
 }
 ```
 
-Com isso estamos dizendo que o UserService poderá ser provido via injeção de dependencia, e com o providedIn: 'root' significa que estamos provendo quando a aplicação inicializa somente uma instancia do tipo UserService para toda aplicação, isso chamamos de singleton.
+Com isso estamos dizendo que o UserService poderá set provido via injeção de dependencia, e com o providedIn: 'root' significa que estamos provendo quando a aplicação inicializa somente uma instancia do tipo UserService para toda aplicação, isso chamamos de singleton.
 
 Exemplo de como consumir tal UserService:
 
