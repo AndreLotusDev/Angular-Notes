@@ -64,6 +64,14 @@ Nesse exemplo acima construimos um serviço de API ao qual a URL base é definid
 
 O sistema de dependencia do angular faz que caso um componente filho consuma um serviço que tenha que ser injetado, ele irá procurar nos providers dele mesmo, logo após no provider do componente pai, e depois no módulo pai.
 
+---
 
+No sistema de injeção de dependência do angulas temos três modos (três decorators) ao quais são muito uteis:
+
+1 - @SkipSelf: ao invés de fornecer o service pelo próprio componente caso ele esteja sendo injetado no componente, ele irá ignorar e pegar no componente pai ou módulo pai.
+
+2 - @Optional: Caso não seja possível resolver a injeção, o serviço virá como nulo e não irá quebrar a aplicação.
+
+3 - @Self: ao invés de utilizar possivelmente o serviço que vem do pai, ele irá tentar pegar dentro do próprio componente.
 
 ---
