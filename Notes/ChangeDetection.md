@@ -2,7 +2,7 @@
 aliases: 
 tags: 
 date created: Sunday, May 19th 2024, 11:16:18 pm
-date modified: Sunday, May 19th 2024, 11:35:29 pm
+date modified: Sunday, May 19th 2024, 11:41:50 pm
 ---
 Por default o angular tem o change detection, ao qual é responsável por detectar mudanças no estado da aplicação e assim por conseguinte atualizar a UI.
 
@@ -65,3 +65,5 @@ export class MyComponent {
 ```
 
 ---
+
+OBS: O async pipe usado em conjunto com a estrategia onPush recebe sua destruição corretamente de forma automática quando o componente morre, então os dois fazem uma junção perfeita em situações onde se há a necessidade de extrema performance.
