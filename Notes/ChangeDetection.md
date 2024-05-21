@@ -2,7 +2,7 @@
 aliases: 
 tags: 
 date created: Sunday, May 19th 2024, 11:16:18 pm
-date modified: Sunday, May 19th 2024, 11:41:50 pm
+date modified: Monday, May 20th 2024, 12:14:44 am
 ---
 Por default o angular tem o change detection, ao qual é responsável por detectar mudanças no estado da aplicação e assim por conseguinte atualizar a UI.
 
@@ -67,3 +67,71 @@ export class MyComponent {
 ---
 
 OBS: O async pipe usado em conjunto com a estrategia onPush recebe sua destruição corretamente de forma automática quando o componente morre, então os dois fazem uma junção perfeita em situações onde se há a necessidade de extrema performance.
+
+---
+
+Também podemos usar o angular decorator attribute, ele é muito útil quando queremos passar do componente pai para o componente filho um attributo ao qual ao longo do ciclo de vida da aplicação não irá mudar, ou seja algo estático, com isso ele irá set evitado de set observado e com isso renderá mais performance para aplicação, isso no caso de você escolher seguir com a estrategia onPush.
+
+```typescript
+import { Component, Attribute } from '@angular/core';
+
+@Component({
+  selector: 'my-component',
+  template: `<p>O tipo é: {{ type }}</p>`
+})
+export class MyComponent {
+  constructor(@Attribute('type') public type: string) { }
+}
+```
+
+Na hora de criar o componente filho no componente pai:
+
+```html
+<my-component type="example"></my-component>
+```
+
+---
+
+Também podemos utilizar o ChangeDetectionRef ao qual permite que alteramos de forma granular e de forma mais refinada o mesmo commandos que o angular faz por debaixo dos panos, aqui estão alguns commandos que podemos utilizar com o ChangeDetectionRef:
+
+1. **markForCheck()**: Este método marca o componente e todos os components ancestrais para verificação na próxima execução do ciclo de detecção de mudanças. Isso é útil em estratégias de detecção de mudanças `OnPush`, onde as verificações são normalmente minimizadas e ocorrem apenas sob certas condições.
+    
+2. **detach()**: Desvincula o componente do sistema de detecção de mudanças. Isso significa que mesmo que os dados do componente mudem, a exibição não será atualizada automaticamente até que você manualmente solicite a verificação.
+    
+3. **detectChanges()**: Força a verificação de mudanças no componente e em seus filhos. Este método é útil quando você sabe que os dados mudaram, mas a atualização da exibição não ocorreu, talvez porque o componente tenha sido desvinculado.
+    
+4. **reattach()**: Reataca o componente ao sistema de detecção de mudanças, permitindo que ele seja verificado automaticamente novamente após ter sido previamente desvinculado.
+    
+5. **checkNoChanges()**: É usado principalmente em modos de desenvolvimento para verificar se não há mudanças. Se houver mudanças detectadas quando este método é chamado, ele lançará um error, sendo útil para garantir que durante uma fase do ciclo de vida nenhumas mudanças ocorram (por exemplo, após a inicialização).
+
+De certa forma é recomendado utilizar somente se estritamente necessário, pois ele pode onerar e muito a performance da aplicação e introduzir bugs desnecessários também.
+
+Exemplo de código:
+
+```typescript
+import { Component, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
+
+@Component({
+  selector: 'app-my-component',
+  template: `
+    <h1>{{ data }}</h1>
+    <button (click)="updateData()">Update Data</button>
+  `,
+  changeDetection: ChangeDetectionStrategy.OnPush
+})
+export class MyComponent {
+  data: string = 'Initial data';
+
+  constructor(private cd: ChangeDetectorRef) {}
+
+  updateData() {
+    this.data = 'Updated data';
+    this.cd.detectChanges();
+  }
+}
+```
+
+Nesse exemplo aqui por exemplo como a changeDetection é o OnPush, então muita coisa se torna manual, mas na hora de atualizar os dados eu marco como atualizado e no próximo ciclo de vida ele será atualizado independente.
+
+---
+
