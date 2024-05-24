@@ -2,8 +2,12 @@
 aliases: 
 tags: 
 date created: Sunday, May 5th 2024, 1:09:42 pm
-date modified: Sunday, May 5th 2024, 1:11:39 pm
+date modified: Saturday, May 25th 2024, 8:25:55 pm
 ---
+**OBS: Essa feature é interessante não usar de forma direta quando começamos uma aplicação, é bom utilizarmos somente quando já temos uma aplicação em produção e ela já começa a demonstrar sinais de performance onerada, ai sim utilizamos essa feature para melhorarmos a performance.**
+
+---
+
 Para questões de performance temos a keyword defer, ela é usada para indicar quando um componente deve set inicializado ou não, utilizando ela antes dos parametros de entrada indicamos que o componente so deverá set inicializado quando seus dados forem alterados.
 
 exemplo:
