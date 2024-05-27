@@ -2,7 +2,7 @@
 aliases: 
 tags: 
 date created: Thursday, May 23rd 2024, 6:42:06 pm
-date modified: Thursday, May 23rd 2024, 6:46:02 pm
+date modified: Sunday, May 26th 2024, 9:12:18 pm
 ---
 O angular prove por meio de seu framework suporte a mais recente API dos navegadores que são os custom elements, ou seja, caso você trabalhe em um projeto grande, um CMS, ou quer dinamicamente usar diferentes browsers isso pode set possível com essa feature, com ela podemos usar tag customizadas que não dependem somente de um framework.
 
