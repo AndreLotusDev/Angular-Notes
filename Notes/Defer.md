@@ -2,7 +2,7 @@
 aliases: 
 tags: 
 date created: Sunday, May 5th 2024, 1:09:42 pm
-date modified: Sunday, May 26th 2024, 9:20:51 pm
+date modified: Monday, May 27th 2024, 11:56:47 pm
 ---
 **OBS: Essa feature é interessante não usar de forma direta quando começamos uma aplicação, é bom utilizarmos somente quando já temos uma aplicação em produção e ela já começa a demonstrar sinais de performance onerada, ai sim utilizamos essa feature para melhorarmos a performance.**
 
@@ -36,3 +36,30 @@ Assim como podemos usar somente o defer, podemos também combinar ele com outras
 }
 ```
 
+---
+
+Temos também outra keyword que a priori pode gerar confusão, que é o loading, a diferença entre o placeholder e o loading é que o placeholder é a primeira sentença, ou seja enquanto o defer não for engatilhado o placeholder será o primeiro a set mostrado, depois que o gatilho é ativado no defer então temos o uso do loading **enquanto o defer não carregar completamente**.
+
+Exemplo:
+
+```typescript
+  @defer {
+        <large-component />
+      } @placeholder {
+        Placeholder
+      } @loading {
+        Loading...
+      } @error {
+        Something went wrong :(
+      }
+```
+
+---
+
+Temos tambem a keyword de error, caso o defer nao funcione durante seu engatilhamento
+
+```html
+@error {
+	<error-message />
+}
+```
