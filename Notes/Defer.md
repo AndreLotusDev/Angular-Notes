@@ -2,7 +2,7 @@
 aliases: 
 tags: 
 date created: Sunday, May 5th 2024, 1:09:42 pm
-date modified: Monday, May 27th 2024, 11:56:47 pm
+date modified: Friday, June 21st 2024, 3:22:07 pm
 ---
 **OBS: Essa feature é interessante não usar de forma direta quando começamos uma aplicação, é bom utilizarmos somente quando já temos uma aplicação em produção e ela já começa a demonstrar sinais de performance onerada, ai sim utilizamos essa feature para melhorarmos a performance.**
 
@@ -63,3 +63,10 @@ Temos tambem a keyword de error, caso o defer nao funcione durante seu engatilha
 	<error-message />
 }
 ```
+
+---
+
+O defer permite que tenhamos triggers em components distantes do componente de defer, que possam triggar algo que faça o componente em questão set carregado, isso pode set util para jogar somente o JS e HTML no codigo do cliente somente quando realmente necessário.
+
+---
+
