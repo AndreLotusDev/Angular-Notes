@@ -12,17 +12,33 @@
 
 <!-- The code below show the new way of using the skeleton loader component -->
 
-<!-- ngfor product -->
-<div class="item-flex-center" *ngFor="let product of products">
-  <div class="item-image">
-    <img [src]="product.image" alt="product image" />
-  </div>
-  <div class="item-details">
-    <h2>{{ product.name }}</h2>
-    <p>{{ product.description }}</p>
+<div
+  *ngIf="
+    products != null && products != undefined && products.length > 0;
+    else skeletonLoaderContainer
+  "
+>
+  <div class="item-flex-center" *ngFor="let product of products">
+    <div class="item-image">
+      <img [src]="product.image" alt="product image" />
+    </div>
+    <div class="item-details">
+      <h2>{{ product.name }}</h2>
+      <p>{{ product.description }}</p>
+    </div>
   </div>
 </div>
 
-<div class="loader-container" #skeletonLoaderContainer>
-  <ngx-skeleton-loader count="5" appearance="circle" />
-</div>
+<!-- example with circles -->
+<!-- <ng-template #skeletonLoaderContainer>
+  <div class="loader-container">
+    <ngx-skeleton-loader count="5" appearance="circle" />
+  </div>
+</ng-template> -->
+
+<!-- example with lines -->
+<ng-template #skeletonLoaderContainer>
+  <div class="loader-container">
+    <ngx-skeleton-loader count="5" appearance="line" />
+  </div>
+</ng-template>

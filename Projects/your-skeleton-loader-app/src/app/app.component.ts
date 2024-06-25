@@ -22,6 +22,7 @@ export class AppComponent implements OnInit {
     //After two seconds, load the products with detailed information, using RXJS
 
     setTimeout(() => {
+      console.log('executed');
       this.products = [
         new Product({
           id: 1,
@@ -45,6 +46,6 @@ export class AppComponent implements OnInit {
           description: '',
         }),
       ];
-    }, 5000);
+    }, 2000);
   }
 }
